@@ -1,18 +1,17 @@
 import { useState } from 'react'
-import { RgbaColorPicker } from "react-colorful";
+import { Outlet } from "react-router-dom";
 import './App.css'
 
 function App() {
-  const [color, setColor] = useState("#aabbcc");
 
 
   return (
     <>
-      <div className="color-picker">
-       <RgbaColorPicker color={color} onChange={setColor} />
-      </div>
+      <h1>Working</h1>
+      <Outlet />
     </>
   )
 }
 
 export default App
+
