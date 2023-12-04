@@ -1,7 +1,11 @@
+import { HexColorPicker } from "react-colorful";
+
 function ColorStudio() {
+    const [color, setColor] = useState("#aabbcc");
+
     return (
         <div>
-            <h1>Working</h1>
+            <HexColorPicker color={color} onChange={setColor} />
         </div>
     )
 }
