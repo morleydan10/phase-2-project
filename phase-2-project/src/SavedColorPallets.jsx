@@ -1,7 +1,13 @@
-function SavedColorPallets() {
+import React, { useState } from "react";
+
+function SavedColorPallets({ myPallets }) {
+
     return (
         <div>
-            <h1>Working</h1>
+            <h1>My Saved Pallets</h1>
+            <div className="pallet-container">
+                {myPallets}
+            </div>
         </div>
     )
 }

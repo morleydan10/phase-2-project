@@ -74,6 +74,29 @@ function handleColorChange(e){
     }
   }
 
+
+
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        
+        
+        const newPallet = [{
+            primary: {},
+            secondary: {},
+            tertiary: {},
+            quarternary: {}
+        }
+    ]
+
+    fetch("http://localhost:3000/pallets")
+    .then((res) => res.json())
+    .then((data) => {
+        onAddPallet(data)
+    }), [] 
+};
+
+
     return (
         <div>
             <RgbaColorPicker color={color} onChange={handleColorSet} />
