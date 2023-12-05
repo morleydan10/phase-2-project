@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
 
 .color-picker .react-colorful{
   width: 1000px;
@@ -47,6 +47,7 @@
   font-family: Montserrat;
 }
 
+/* Header CSS */
 .web-title{
   font-size: 60px;
   font-family: Montserrat;
@@ -99,18 +100,42 @@
   text-decoration: none;
 }
 
-.colorActive{
-  font-size: 20px;
+/* Color Selector - Values CSS */
+
+.red{
   font-family: Montserrat;
-  font-weight: 200px,
+  font-size: 15px;
+  font-weight: 200px;
+  padding: 10px;
 }
 
-.color{
-  font-size: 15px;
+.green{
   font-family: Montserrat;
-  font-weight: 100px;
+  font-size: 15px;
+  font-weight: 200px;
+  padding: 10px;
 }
-    
+
+.blue{
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 200px;
+  padding: 10px;
+}
+.transparency{
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 200px;
+  padding: 10px;
+}
+.Hex{
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 200px;
+  padding: 10px;
+}
+
+
 /* Color Studio CSS */
 
 .example {
@@ -123,7 +148,7 @@
   margin-bottom: 20px;
   border-radius: 8px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-
+  
 }
 
 /* Color Studio CSS Example Header*/
@@ -142,11 +167,11 @@ header {
 
 .example nav span {
   margin: 10px;
- font-weight: bold;
- padding: 5px;
- border-radius: 8px;
- border: solid;
- border-width: 1px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 8px;
+  border: solid;
+  border-width: 1px;
 }
 
 header h2 {
@@ -187,12 +212,13 @@ header h2 {
 
 .colorActive{
   font-size: 20px;
-  font-family: Monsterrat;
+  font-family: Montserrat;
   font-weight: 200px;
 }
 
 .color{
   font-size: 15px;
-  font-family: Monsterrat;
+  font-family: Montserrat;
   font-weight: 100px;
 }
+

@@ -78,26 +78,26 @@ function ColorStudio() {
                     </div>
                 </div>
                 <div className="example">
-                    <div class="card-holder">
-                        <div class="card">
+                    <div className="card-holder">
+                        <div className="card">
                             <img src="https://i.pinimg.com/736x/24/8e/1e/248e1e4f38522a9179f8c7b3ac3b1508.jpg" height="100px" alt="image of the number 1"/>
                             <h3>Shirt</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <button>Shop</button>
                         </div>
-                        <div class="card">
+                        <div className="card">
                             <img src="https://static.vecteezy.com/system/resources/previews/010/157/211/original/carpenter-pants-work-skate-straight-leg-flat-technical-drawing-illustration-blank-workwear-streetwear-mock-up-template-for-design-and-tech-packs-cad-vector.jpg" height="100px" alt="image of the number 1"/>
                             <h3>Pant</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <button>Shop</button>
                         </div>
-                        <div class="card">
+                        <div className="card">
                             <img src="https://img.freepik.com/premium-vector/vector-illustration-men-s-trench-coat-front-back-views_469364-225.jpg?w=360" height="100px" alt="image of the number 1"/>
                             <h3>Coat</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <button>Shop</button>
                         </div>
-                        <div class="card">
+                        <div className="card">
                             <img src="https://static.vecteezy.com/system/resources/previews/010/157/208/non_2x/trucker-hat-snapback-technical-drawing-illustration-blank-streetwear-mock-up-template-for-design-and-tech-packs-cad-strap-mesh-vector.jpg" height="100px" alt="image of the number 1"/>
                             <h3>Hat</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
