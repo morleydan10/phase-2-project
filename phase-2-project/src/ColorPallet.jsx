@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function ColorPallet({color, setPrimary, setSecondary, setTertiary, setAccent, primary, secondary, tertiary, accent}) {
+function ColorPallet({color, setPrimary, setSecondary, setTertiary, setAccent, primary, secondary, tertiary, accent, background, setBackground, titleFont, setTitleFont, bodyFont, setBodyFont}) {
 
     //sets seleected color
     const [selectedColor, setSelectedColor] = useState("")
@@ -31,9 +31,22 @@ function ColorPallet({color, setPrimary, setSecondary, setTertiary, setAccent, p
         setSelectedColor(e.target.id)
     }
 
+    //handles background/font colors
+    function handlesSecondarySelection(e) {
+        let id = e.target.id
+
+        if(id === "background") {
+            setBackground(e.target.value)
+        } else if (id === "title-font") {
+            setTitleFont(e.target.value)
+        } else if (id === "body-font") {
+            setBodyFont(e.target.value)
+        }
+    }
 
     return(
-        <div id="pallet-container">
+        <>
+            <div id="pallet-container">
                 <div id="primary-color" >
                     <h2>Primary Color</h2>
                     <div id="primary" onClick={handleSelection} style={{backgroundColor: primary}}>x</div>
@@ -51,6 +64,40 @@ function ColorPallet({color, setPrimary, setSecondary, setTertiary, setAccent, p
                     <div id="accent" onClick={handleSelection} style={{backgroundColor: accent}}>x</div>
                 </div>
             </div>
+            <div className="secondaries-container">
+                <div>
+                    <label htmlFor="background" >Background Color</label>
+                    <select id="background" onChange={handlesSecondarySelection}>
+                        <option value="white">White</option>
+                        <option value="black">Black</option>
+                        <option value="primary">Primary</option>
+                        <option value="secondary">Secondary</option>
+                        <option value="tertiary">Tertiary</option>
+                        <option value="accent">Accent</option>
+                    </select>
+                    <label htmlFor="title-font" >Title Font Color</label>
+                    <select id="title-font" onChange={handlesSecondarySelection}>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="primary">Primary</option>
+                        <option value="secondary">Secondary</option>
+                        <option value="tertiary">Tertiary</option>
+                        <option value="accent">Accent</option>
+                    </select>
+                    <label htmlFor="body-font" >Body Font Color</label>
+                    <select id="body-font" onChange={handlesSecondarySelection}>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="primary">Primary</option>
+                        <option value="secondary">Secondary</option>
+                        <option value="tertiary">Tertiary</option>
+                        <option value="accent">Accent</option>
+                    </select>
+                </div>
+                <div>
+                </div>
+            </div>
+        </>
     )
 }
 
