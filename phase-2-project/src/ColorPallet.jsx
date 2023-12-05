@@ -7,6 +7,7 @@ function ColorPallet({color, setPrimary, setSecondary, setTertiary, setAccent, p
 
     //sets seleected color
     const [selectedColor, setSelectedColor] = useState("")
+    const [cssClass, setCssClass] = useState("")
     
     //converts color to string
     function colorStringify(color) {
@@ -32,24 +33,25 @@ function ColorPallet({color, setPrimary, setSecondary, setTertiary, setAccent, p
     //handles selection
     function handleSelection(e) {
         setSelectedColor(e.target.id)
+        setCssClass(cssClassActivate(true))
     }
 
 
     return(
         <div id="pallet-container">
-                <div className={cssClassActivate} id="primary-color" >
+                <div className={cssClassActivate(selectedColor === "primary")} id="primary-color" >
                     <h2>Primary Color</h2>
                     <div id="primary" onClick={handleSelection} style={{backgroundColor: primary}}>x</div>
                 </div>
-                <div className={cssClassActivate} id="secondary-color">
+                <div className={cssClassActivate(selectedColor === "secondary")} id="secondary-color">
                     <h2>Secondary Color</h2>
                     <div id="secondary" onClick={handleSelection} style={{backgroundColor: secondary}}>x</div>
                 </div>
-                <div className={cssClassActivate} id="tertiary-color" >
+                <div className={cssClassActivate(selectedColor === "tertiary")} id="tertiary-color" >
                     <h2>Tertiary Color</h2>
                     <div id="tertiary" onClick={handleSelection} style={{backgroundColor: tertiary}}>x</div>
                 </div>
-                <div className={cssClassActivate} id="accent-color" >
+                <div className={cssClassActivate(selectedColor === "accent")} id="accent-color" >
                     <h2>Accent Color</h2>
                     <div id="accent" onClick={handleSelection} style={{backgroundColor: accent}}>x</div>
                 </div>
