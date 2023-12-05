@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+
 function ColorPallet({color, setPrimary, setSecondary, setTertiary, setAccent, primary, secondary, tertiary, accent, background, setBackground, titleFont, setTitleFont, bodyFont, setBodyFont}) {
 
   const cssClassActivate = ({ isColorActive}) => 
@@ -34,7 +35,6 @@ isColorActive ? "colorActive" : "color"
     //handles selection
     function handleSelection(e) {
         setSelectedColor(e.target.id)
-        setCssClass(cssClassActivate(true))
     }
 
     //handles background/font colors
