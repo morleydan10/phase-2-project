@@ -1,4 +1,4 @@
-.color-picker .react-colorful{
+++.color-picker .react-colorful{
   width: 1000px;
   border-radius: 0px;
 }
@@ -96,7 +96,7 @@
   text-decoration: none;
 }
 
-/* .colorActive{
+.colorActive{
   font-size: 10px;
   font-family: Monsterrat;
   font-weight: 100px;
@@ -106,4 +106,4 @@
   font-size: 25px;
   font-family: Monsterrat;
   font-weight:300px;
-} */
+}
