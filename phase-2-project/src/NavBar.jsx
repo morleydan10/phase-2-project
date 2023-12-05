@@ -1,10 +1,19 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
+
+const cssClass = ({ isActive, isPending }) => 
+    isPending ? "pending" : isActive ? "active" : "navlink";
+
 function NavBar() {
     return (
-        <div>
-            <button className="navbar_button">Home</button>
-            <button className="navbar_button">ColorStudio</button>
-            <button className="navbar_button">My Pallets</button>
+        <div className="navbar">
+            <nav> 
+                <NavLink className={cssClass} to="/">Home</NavLink>
+                <NavLink className={cssClass} to="/ColorStudio">Color Studio</NavLink>
+                <NavLink className={cssClass} to="/Pallets">My Saved Palettes</NavLink>
+            </nav>
         </div>
+            
     )
 }
 

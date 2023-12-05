@@ -1,6 +1,7 @@
 import { RgbaColorPicker } from "react-colorful";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function ColorStudio() {
 //use state for RGBAColorPicker
