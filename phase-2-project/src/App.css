@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+
 ++.color-picker .react-colorful{
   width: 1000px;
   border-radius: 0px;
@@ -96,6 +99,18 @@
   text-decoration: none;
 }
 
+.colorActive{
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: 200px,
+}
+
+.color{
+  font-size: 15px;
+  font-family: Montserrat;
+  font-weight: 100px;
+}
+    
 /* Color Studio CSS */
 
 .example {
@@ -162,15 +177,3 @@ header h2 {
 }
 
 /* CSS for active swatch */
-
-.colorActive{
-  font-size: 10px;
-  font-family: Monsterrat;
-  font-weight: 100px;
-}
-
-.color{
-  font-size: 25px;
-  font-family: Monsterrat;
-  font-weight:300px;
-} */
