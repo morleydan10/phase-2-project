@@ -76,7 +76,9 @@ function ColorSelector({color, setColor}) {
 
     return (
         <div>
+            <div className="RgbaPicker">
             <RgbaColorPicker color={color} onChange={handleColorSet} />
+            </div>
             <div className="color-detail-conatiner">
                 <div>
                     <div className="red">
