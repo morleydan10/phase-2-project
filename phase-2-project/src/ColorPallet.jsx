@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 
+const cssClassActivate = ({ isColorActive}) => 
+isColorActive ? "colorActive" : "color"
+
 function ColorPallet({color, setPrimary, setSecondary, setTertiary, setAccent, primary, secondary, tertiary, accent}) {
 
     //sets seleected color
@@ -34,19 +37,19 @@ function ColorPallet({color, setPrimary, setSecondary, setTertiary, setAccent, p
 
     return(
         <div id="pallet-container">
-                <div id="primary-color" >
+                <div className={cssClassActivate} id="primary-color" >
                     <h2>Primary Color</h2>
                     <div id="primary" onClick={handleSelection} style={{backgroundColor: primary}}>x</div>
                 </div>
-                <div id="secondary-color">
+                <div className={cssClassActivate} id="secondary-color">
                     <h2>Secondary Color</h2>
                     <div id="secondary" onClick={handleSelection} style={{backgroundColor: secondary}}>x</div>
                 </div>
-                <div id="tertiary-color" >
+                <div className={cssClassActivate} id="tertiary-color" >
                     <h2>Tertiary Color</h2>
                     <div id="tertiary" onClick={handleSelection} style={{backgroundColor: tertiary}}>x</div>
                 </div>
-                <div id="accent-color" >
+                <div className={cssClassActivate} id="accent-color" >
                     <h2>Accent Color</h2>
                     <div id="accent" onClick={handleSelection} style={{backgroundColor: accent}}>x</div>
                 </div>
