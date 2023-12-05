@@ -179,13 +179,13 @@ header h2 {
 /* CSS for active swatch */
 
 .colorActive{
-  font-size: 10px;
+  font-size: 20px;
   font-family: Monsterrat;
-  font-weight: 100px;
+  font-weight: 200px;
 }
 
 .color{
-  font-size: 25px;
+  font-size: 15px;
   font-family: Monsterrat;
-  font-weight:300px;
-} */
+  font-weight: 100px;
+}
