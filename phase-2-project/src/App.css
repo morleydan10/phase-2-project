@@ -221,6 +221,7 @@ header h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  border-radius: 5px;
 }
 
 .card {
@@ -347,6 +348,7 @@ header h2 {
   padding-bottom: 10px;
   height: auto; 
   padding-top: 1px;
+  border-radius: 5px;
 }
 
 .top-of-blog {

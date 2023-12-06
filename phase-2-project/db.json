@@ -11,12 +11,12 @@
       "id": 1
     },
     {
-      "primary": "rgba( 255 , 255 , 255 , 1 )",
-      "secondary": "rgba( 255 , 255 , 255 , 1 )",
-      "tertiary": "rgba( 255 , 255 , 255 , 1 )",
+      "primary": "rgba( 5 , 5 , 100 , 1 )",
+      "secondary": "rgba( 48 , 174 , 225 , 1 )",
+      "tertiary": "rgba( 255 , 255 , 100 , 1 )",
       "quarternary": "rgba( 255 , 255 , 255 , 1 )",
-      "background": "rgba( 255 , 255 , 255 , 1 )",
-      "titleFont": "rgba( 0 , 0 , 0 , 1 )",
+      "background": "white",
+      "titleFont": "white",
       "bodyFont": "rgba( 0 , 0 , 0 , 1 )",
       "id": 2
     },

@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ColorSelector from "./ColorSelector";
 import ColorPallet from "./ColorPallet";
 import ColorPalletExamples from "./ColorPalletExamples";
+import { useParams } from "react-router-dom";
 
 
 function ColorStudio() {
+    //sets up params
+    const params = useParams();
+
     //sets seleected color
     const [selectedColor, setSelectedColor] = useState("primary")
 
@@ -20,12 +24,27 @@ function ColorStudio() {
     const[secondary, setSecondary] = useState("rgba( 255 , 255 , 255 , 1 )")
     const[tertiary, setTertiary] = useState("rgba( 255 , 255 , 255 , 1 )")
     const[accent, setAccent] = useState("rgba( 255 , 255 , 255 , 1 )")
-    const[background, setBackground] = useState("white)")
-    const[titleFont, setTitleFont] = useState("black")
-    const[bodyFont, setBodyFont] = useState("black")
+    const[background, setBackground] = useState("rgba( 255 , 255 , 255 , 1 )")
+    const[titleFont, setTitleFont] = useState("rgba( 0 , 0 , 0 , 1 )")
+    const[bodyFont, setBodyFont] = useState("rgba( 0 , 0 , 0 , 1 )")
 
-    //Handles saving of pallets
-    function handleSave() {
+     //use effect for initial upload
+     useEffect(() => {
+        fetch(`http://localhost:3000/pallets/${params.id}`)
+        .then(resp => resp.json())
+        .then(data => {
+            setPrimary(data.primary)
+            setSecondary(data.secondary)
+            setTertiary(data.tertiary)
+            setAccent(data.acent)
+            setBackground(data.background)
+            setTitleFont(data.titleFont)
+            setBodyFont(data.bodyFont)
+        })
+    }, [])
+
+    //Handles saving of pallets edits
+    function handleEdit() {
         const newPallet = {
           primary: primary,
           secondary: secondary,
@@ -37,8 +56,8 @@ function ColorStudio() {
         }
 
 
-        fetch("http://localhost:3000/pallets", {
-            method: "POST",
+        fetch(`http://localhost:3000/pallets/${params.id}`, {
+            method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -78,7 +97,7 @@ function ColorStudio() {
             accent={accent}
             setAccent={setAccent}
             />
-            <button className="new-pallet-button" onClick={handleSave}>Save Pallet</button>
+            <button className="new-pallet-button" onClick={handleEdit}>Save Edits</button>
             <ColorPalletExamples 
             background={background}
             titleFont={titleFont}
@@ -94,4 +113,3 @@ function ColorStudio() {
 }
 
 export default ColorStudio;
-

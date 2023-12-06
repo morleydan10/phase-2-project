@@ -3,6 +3,7 @@ import ErrorPage from "./ErrorPage"
 import Home from "./Home";
 import ColorStudio from "./ColorStudio";
 import SavedColorPallets from "./SavedColorPallets";
+import ColorStudioEdit from "./ColorStudioEdit";
 import { createBrowserRouter } from "react-router-dom";
 
 
@@ -24,6 +25,10 @@ const routes = createBrowserRouter([
                 path: "/Pallets",
                 element: <SavedColorPallets />
             },
+            {
+                path: "/ColorStudio/:id",
+                element: <ColorStudioEdit />
+            }
         ]
     }
 ])
