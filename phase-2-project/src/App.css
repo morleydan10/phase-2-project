@@ -393,17 +393,13 @@ header h2 {
   margin-left: 20px;
 }
 
-/* new-pallet-button CS*/
+/* new-pallet CS*/
 
 .new-pallet-button {
-  width: 10%;
-  margin-left: 45%;
-  margin-right: 45%;
-  margin-top: 20px;
+  width: 100px;
   height: 40px;
   border-radius: 5px;
   background-color: whitesmoke;
-  font-family: Montserrat;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 3px 5px;
   -moz-box-shadow: rgba(0,0,0,0.3) 0 3px 5px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 3px 5px;
@@ -504,4 +500,25 @@ header h2 {
 .load-button:hover{
   transform: scale(1.1);
   transition: all 500ms;
+  
+  
+.new-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat;
+  margin-top: 20px;
+}
+
+.set-name {
+  text-align: center;
+  margin-right: 20px;
+}
+
+.set-name input{
+  border-radius: 5px;
+}
+
+.set-name label{
+  margin-right: 5px;
 }
