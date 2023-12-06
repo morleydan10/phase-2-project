@@ -27,6 +27,7 @@ function ColorStudio() {
     const[background, setBackground] = useState("rgba( 255 , 255 , 255 , 1 )")
     const[titleFont, setTitleFont] = useState("rgba( 0 , 0 , 0 , 1 )")
     const[bodyFont, setBodyFont] = useState("rgba( 0 , 0 , 0 , 1 )")
+    const[palleteName, setPalleteName] = useState("")
 
      //use effect for initial upload
      useEffect(() => {
@@ -52,7 +53,8 @@ function ColorStudio() {
           quarternary: accent,
           background: background,
           titleFont: titleFont,
-          bodyFont: bodyFont
+          bodyFont: bodyFont,
+          name: palleteName
         }
 
 
@@ -65,6 +67,31 @@ function ColorStudio() {
         })
         .then(resp => resp.json())
         .then(data => console.log(data))
+    }
+
+     //Pallete naming
+    //Profanity Filter
+    var customFilter = new Filter({ placeHolder: '*'});
+ 
+    function scrubName(name) {
+        if(name.length > 0) {
+            if(/^[A-Za-z0-9_ ]+$/.test(name)) {
+            let nameWithNoCursing = customFilter.clean(name)
+            let isValidName =  /^[A-Za-z0-9_ ]+$/.test(nameWithNoCursing)
+            return isValidName
+            } else {
+                return false
+            }
+        } else {
+            return true 
+        }
+    }
+
+    function handleName(e) {
+        if(scrubName(e.target.value)) {
+            setPalleteName(e.target.value)
+        }
+
     }
 
     return (
@@ -97,7 +124,13 @@ function ColorStudio() {
             accent={accent}
             setAccent={setAccent}
             />
-            <button className="new-pallet-button" onClick={handleEdit}>Save Edits</button>
+            <div className="new-area">
+                <div className="set-name">
+                    <label htmlFor="pallet-name">Update Pallet Name:</label>
+                    <input type="text" id="pallet-name" onChange={handleName} value={palleteName} maxLength="20"/>
+                </div>
+                <button className="new-pallet-button" onClick={handleSave}>Update Pallet</button>
+            </div>
             <ColorPalletExamples 
             background={background}
             titleFont={titleFont}
