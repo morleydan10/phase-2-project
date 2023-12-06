@@ -2,6 +2,8 @@ import { useState } from "react";
 import ColorSelector from "./ColorSelector";
 import ColorPallet from "./ColorPallet";
 import ColorPalletExamples from "./ColorPalletExamples";
+import Filter from "bad-words";
+
 
 
 function ColorStudio() {
@@ -23,6 +25,7 @@ function ColorStudio() {
     const[background, setBackground] = useState("white)")
     const[titleFont, setTitleFont] = useState("black")
     const[bodyFont, setBodyFont] = useState("black")
+    const[palleteName, setPalleteName] = useState("")
 
     //Handles saving of pallets
     function handleSave() {
@@ -33,7 +36,8 @@ function ColorStudio() {
           quarternary: accent,
           background: background,
           titleFont: titleFont,
-          bodyFont: bodyFont
+          bodyFont: bodyFont,
+          name: palleteName
         }
 
 
@@ -47,6 +51,31 @@ function ColorStudio() {
         .then(resp => resp.json())
         .then(data => console.log(data))
     }
+    //Pallete naming
+    //Profanity Filter
+    var customFilter = new Filter({ placeHolder: '*'});
+ 
+    function scrubName(name) {
+        if(name.length > 0) {
+            if(/^[A-Za-z0-9_ ]+$/.test(name)) {
+            let nameWithNoCursing = customFilter.clean(name)
+            let isValidName =  /^[A-Za-z0-9_ ]+$/.test(nameWithNoCursing)
+            return isValidName
+            } else {
+                return false
+            }
+        } else {
+            return true 
+        }
+    }
+
+    function handleName(e) {
+        if(scrubName(e.target.value)) {
+            setPalleteName(e.target.value)
+        }
+
+    }
+    
 
     return (
         <>
@@ -78,7 +107,13 @@ function ColorStudio() {
             accent={accent}
             setAccent={setAccent}
             />
-            <button className="new-pallet-button" onClick={handleSave}>Save Pallet</button>
+            <div className="new-area">
+                <div className="set-name">
+                    <label htmlFor="pallet-name">Pallet Name:</label>
+                    <input type="text" id="pallet-name" onChange={handleName} value={palleteName} maxLength="20"/>
+                </div>
+                <button className="new-pallet-button" onClick={handleSave}>Save Pallet</button>
+            </div>
             <ColorPalletExamples 
             background={background}
             titleFont={titleFont}

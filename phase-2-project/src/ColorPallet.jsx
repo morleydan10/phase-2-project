@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 
-
 function ColorPallet({color, setPrimary, setSecondary, setTertiary, setAccent, primary, secondary, tertiary, accent, setBackground, setTitleFont, setBodyFont, selectedColor, setSelectedColor, background, titleFont, bodyFont}) {
     
     //converts color to string
