@@ -1,11 +1,54 @@
 {
   "pallets": [
-      {
-          "id": 0,
-          "primary": "rgba(255, 255, 255, 1)",
-          "secondary": "rgba(255, 255, 255, 1)",
-          "tertiary": "rgba(255, 255, 255, 1)",
-          "quarternary": "rgba(255, 255, 255, 1)"
-      }
+    {
+      "primary": "rgba( 255 , 255 , 255 , 1 )",
+      "secondary": "rgba( 255 , 255 , 255 , 1 )",
+      "tertiary": "rgba( 255 , 255 , 255 , 1 )",
+      "quarternary": "rgba( 255 , 255 , 255 , 1 )",
+      "background": "rgba( 255 , 255 , 255 , 1 )",
+      "titleFont": "rgba( 0 , 0 , 0 , 1 )",
+      "bodyFont": "rgba( 0 , 0 , 0 , 1 )",
+      "id": 1
+    },
+    {
+      "primary": "rgba( 255 , 255 , 255 , 1 )",
+      "secondary": "rgba( 255 , 255 , 255 , 1 )",
+      "tertiary": "rgba( 255 , 255 , 255 , 1 )",
+      "quarternary": "rgba( 255 , 255 , 255 , 1 )",
+      "background": "rgba( 255 , 255 , 255 , 1 )",
+      "titleFont": "rgba( 0 , 0 , 0 , 1 )",
+      "bodyFont": "rgba( 0 , 0 , 0 , 1 )",
+      "id": 2
+    },
+    {
+      "primary": "rgba( 255 , 255 , 255 , 1 )",
+      "secondary": "rgba( 255 , 255 , 255 , 1 )",
+      "tertiary": "rgba( 255 , 255 , 255 , 1 )",
+      "quarternary": "rgba( 255 , 255 , 255 , 1 )",
+      "background": "rgba( 255 , 255 , 255 , 1 )",
+      "titleFont": "rgba( 0 , 0 , 0 , 1 )",
+      "bodyFont": "rgba( 0 , 0 , 0 , 1 )",
+      "id": 3
+    },
+    {
+      "primary": "rgba( 255 , 255 , 255 , 1 )",
+      "secondary": "rgba( 255 , 255 , 255 , 1 )",
+      "tertiary": "rgba( 255 , 255 , 255 , 1 )",
+      "quarternary": "rgba( 255 , 255 , 255 , 1 )",
+      "background": "rgba( 255 , 255 , 255 , 1 )",
+      "titleFont": "rgba( 0 , 0 , 0 , 1 )",
+      "bodyFont": "rgba( 0 , 0 , 0 , 1 )",
+      "id": 4
+    },
+    {
+      "primary": "rgba( 255 , 255 , 255 , 1 )",
+      "secondary": "rgba( 255 , 255 , 255 , 1 )",
+      "tertiary": "rgba( 255 , 255 , 255 , 1 )",
+      "quarternary": "rgba( 255 , 255 , 255 , 1 )",
+      "background": "rgba( 255 , 255 , 255 , 1 )",
+      "titleFont": "rgba( 0 , 0 , 0 , 1 )",
+      "bodyFont": "rgba( 0 , 0 , 0 , 1 )",
+      "id": 5
+    }
   ]
 }

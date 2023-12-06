@@ -318,7 +318,7 @@ header h2 {
 }
 
 .colorActive div{
-  box-shadow: 2px 2px 2px 2px black;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* color secondaries css*/
@@ -386,3 +386,18 @@ header h2 {
   margin-left: 20px;
 }
 
+/* new-pallet-button CS*/
+
+.new-pallet-button {
+  width: 10%;
+  margin-left: 45%;
+  margin-right: 45%;
+  margin-top: 20px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  font-family: Montserrat;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 3px 5px;
+  -moz-box-shadow: rgba(0,0,0,0.3) 0 3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 3px 5px;
+}
