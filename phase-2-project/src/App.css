@@ -49,6 +49,9 @@
   border-radius: 15px;
   padding: 30px;
   text-align: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px
 }
 
 .homepage-intro{
@@ -77,10 +80,18 @@
   font-weight: 200;
   font-family: Montserrat;
   color: black;
-  box-shadow: 3px 3px rgb(146, 146, 146);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 3px 5px;
+  -moz-box-shadow: rgba(0,0,0,0.3) 0 3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 3px 5px;
+  /* box-shadow: 3px 3px rgb(146, 146, 146); */
   border-radius: 40px;
   background-color: whitesmoke;
+  transition: all 500ms;
+}
 
+.get-started-button:hover{
+  transform: scale(1.1);
+  transition: all 500ms;
 }
 
 /* Header CSS */
