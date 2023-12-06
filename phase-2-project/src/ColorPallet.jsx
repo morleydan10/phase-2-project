@@ -43,7 +43,7 @@ function ColorPallet({color, setPrimary, setSecondary, setTertiary, setAccent, p
 
     return(
         <>
-            <h1 className="collor-pallet-title">Collor Pallet</h1>
+            <h1 className="collor-pallet-title">Color Pallet</h1>
             <div id="pallet-container">
                 <div className={selectedColor === "primary" ? "colorActive" : "color"} id="primary-color" >
                     <h2>Primary Color</h2>

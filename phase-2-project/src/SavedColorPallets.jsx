@@ -17,6 +17,7 @@ function SavedColorPallets() {
 
     function renderSavePallets (pallets) {
         return pallets.map((pallet) => {
+            return(
         
             <SavedPalletCard
                 key={pallet.id}
@@ -29,14 +30,14 @@ function SavedColorPallets() {
                 titleFont={pallet.titleFont}
                 bodyFont={pallet.bodyFont}
             />
-        })
+        )})
     }
 
     
     return (
         <div>
-            <h1 className="page-heading">My Saved Pallets</h1>
-            <SavedPalletCard />
+            <h1 className="page-heading">My Saved Palettes</h1>
+            {renderSavePallets(savedPallets)}
         </div>
     )
 }
