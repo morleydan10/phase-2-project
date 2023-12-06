@@ -26,6 +26,30 @@ function ColorStudio() {
     const[titleFont, setTitleFont] = useState("rgba( 0 , 0 , 0 , 1 )")
     const[bodyFont, setBodyFont] = useState("rgba( 0 , 0 , 0 , 1 )")
 
+    //Handles saving of pallets
+    function handleSave() {
+        const newPallet = {
+          primary: primary,
+          secondary: secondary,
+          tertiary: tertiary,
+          quarternary: accent,
+          background: background,
+          titleFont: titleFont,
+          bodyFont: bodyFont
+        }
+
+
+        fetch("http://localhost:3000/pallets", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newPallet)
+        })
+        .then(resp => resp.json())
+        .then(data => console.log(data))
+    }
+
     return (
         <>
             <ColorSelector 
@@ -56,6 +80,7 @@ function ColorStudio() {
             accent={accent}
             setAccent={setAccent}
             />
+            <button className="new-pallet-button" onClick={handleSave}>Save Pallet</button>
             <ColorPalletExamples 
             background={background}
             titleFont={titleFont}
