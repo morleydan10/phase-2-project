@@ -1,0 +1,11 @@
+{
+  "pallets": [
+      {
+          "id": 0,
+          "primary": "rgba(255, 255, 255, 1)",
+          "secondary": "rgba(255, 255, 255, 1)",
+          "tertiary": "rgba(255, 255, 255, 1)",
+          "quarternary": "rgba(255, 255, 255, 1)"
+      }
+  ]
+}
