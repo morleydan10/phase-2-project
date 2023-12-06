@@ -64,35 +64,39 @@ function ColorPallet({color, setPrimary, setSecondary, setTertiary, setAccent, p
                 </div>
             </div>
             <div className="secondaries-container">
-                <div>
-                    <label htmlFor="background" >Background Color</label>
-                    <select id="background" onChange={handlesSecondarySelection}>
-                        <option value="white">White</option>
-                        <option value="black">Black</option>
-                        <option value="primary">Primary</option>
-                        <option value="secondary">Secondary</option>
-                        <option value="tertiary">Tertiary</option>
-                        <option value="accent">Accent</option>
-                    </select>
-                    <label htmlFor="title-font" >Title Font Color</label>
-                    <select id="title-font" onChange={handlesSecondarySelection}>
-                        <option value="black">Black</option>
-                        <option value="white">White</option>
-                        <option value="primary">Primary</option>
-                        <option value="secondary">Secondary</option>
-                        <option value="tertiary">Tertiary</option>
-                        <option value="accent">Accent</option>
-                    </select>
-                    <label htmlFor="body-font" >Body Font Color</label>
-                    <select id="body-font" onChange={handlesSecondarySelection}>
-                        <option value="black">Black</option>
-                        <option value="white">White</option>
-                        <option value="primary">Primary</option>
-                        <option value="secondary">Secondary</option>
-                        <option value="tertiary">Tertiary</option>
-                        <option value="accent">Accent</option>
-                    </select>
-                </div>
+                    <div className="secondary-value">
+                        <label htmlFor="background" >Background Color:</label>
+                        <select id="background" onChange={handlesSecondarySelection}>
+                            <option value="white">White</option>
+                            <option value="black">Black</option>
+                            <option value="primary">Primary</option>
+                            <option value="secondary">Secondary</option>
+                            <option value="tertiary">Tertiary</option>
+                            <option value="accent">Accent</option>
+                        </select>
+                    </div>
+                    <div className="secondary-value">
+                        <label htmlFor="title-font" >Title Font Color:</label>
+                        <select id="title-font" onChange={handlesSecondarySelection}>
+                            <option value="black">Black</option>
+                            <option value="white">White</option>
+                            <option value="primary">Primary</option>
+                            <option value="secondary">Secondary</option>
+                            <option value="tertiary">Tertiary</option>
+                            <option value="accent">Accent</option>
+                        </select>
+                    </div>
+                    <div className="secondary-value">
+                        <label htmlFor="body-font" >Body Font Color:</label>
+                        <select id="body-font" onChange={handlesSecondarySelection}>
+                            <option value="black">Black</option>
+                            <option value="white">White</option>
+                            <option value="primary">Primary</option>
+                            <option value="secondary">Secondary</option>
+                            <option value="tertiary">Tertiary</option>
+                            <option value="accent">Accent</option>
+                        </select>
+                    </div>
             </div>
         </>
     )

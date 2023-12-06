@@ -4,7 +4,6 @@ function Home() {
     return (
         <main>
             <div className="background-image-div">
-                <img id="background-image" src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/51CJu3t4PvL._AC_SL1024_.jpg">
                     <div className="homepage-div">
                         <h1 className="page-heading">Welcome!</h1>
                         <div className="homepage-text">
@@ -20,7 +19,6 @@ function Home() {
                             </NavLink>
                         </div>
                     </div>
-                </img>
             </div>
 
         </main>

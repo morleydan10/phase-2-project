@@ -69,7 +69,6 @@ function ColorSelector({color, setColor, selectedColor, primary, secondary, tert
             b: parseInt(seperation[5], 10),
             a: parseFloat(seperation[7], 10)
         }
-        console.log(colorObj)
         return colorObj
     }
 
