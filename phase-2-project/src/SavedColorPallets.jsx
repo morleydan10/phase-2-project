@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import SavedPalletCard from "./SavedPalletCard";
 
-function SavedColorPallets({ myPallets }) {
+function SavedColorPallets() {
 
     const [savedPallets, setSavedPallets] = useState([]);
 
@@ -9,18 +10,33 @@ function SavedColorPallets({ myPallets }) {
         .then((res) => res.json())
         .then((data) => {
             console.log(data);
+            setSavedPallets(data);
         })
     }, []
     );
 
+    function renderSavePallets (pallets) {
+        return pallets.map((pallet) => {
+        
+            <SavedPalletCard
+                key={pallet.id}
+                id={pallet.id}
+                primary={pallet.primary}
+                secondary={pallet.secondary}
+                tertiary={pallet.tertiary}
+                quarternary={pallet.quarternary}
+                background={pallet.background}
+                titleFont={pallet.titleFont}
+                bodyFont={pallet.bodyFont}
+            />
+        })
+    }
 
-
+    
     return (
         <div>
             <h1 className="page-heading">My Saved Pallets</h1>
-            <div className="pallet-container">
-                {myPallets}
-            </div>
+            <SavedPalletCard />
         </div>
     )
 }
