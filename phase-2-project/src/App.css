@@ -39,6 +39,8 @@
   height: 50%;
   margin:auto;
   display: block;
+  background-color: white;
+  border-radius: 15px;
 
 }
 
