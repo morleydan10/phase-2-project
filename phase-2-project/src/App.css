@@ -16,7 +16,6 @@
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    padding: 10px;
 
 }
 
@@ -34,14 +33,22 @@
 
 /* Home Page CSS */
 
-.homepage-div{
-  width: 50%;
-  height: 50%;
-  margin:auto;
+.background-image-div{
   display: block;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+}
+
+.homepage-div{
+  width: 50vw;
+  height: 50vh;
+  margin:auto;
   background-color: white;
   border-radius: 15px;
-
+  padding: 30px;
+  text-align: center;
 }
 
 .homepage-intro{

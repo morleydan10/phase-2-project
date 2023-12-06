@@ -19,7 +19,6 @@ function Home() {
                             </NavLink>
                         </div>
                     </div>
-                </img>
             </div>
 
         </main>
