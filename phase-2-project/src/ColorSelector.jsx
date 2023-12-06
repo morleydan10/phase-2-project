@@ -1,9 +1,10 @@
 import { RgbaColorPicker } from "react-colorful";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-function ColorSelector({color, setColor}) {
+function ColorSelector({color, setColor, selectedColor, primary, secondary, tertiary, accent}) {
     //use state for RGBAColorPicker
     const [hexColor, setHexColor] =useState("#ffffff")
+
 
     function handleColorSet(e) {
         setColor(e)
@@ -45,6 +46,33 @@ function ColorSelector({color, setColor}) {
         } : null;
     }
 
+    //sets color values when a swatch is revisited
+    useEffect(() => {
+        if(selectedColor === "primary") {
+            setColor(colorObjectify(primary))
+        } else if (selectedColor === "secondary") {
+            setColor(colorObjectify(secondary))
+        } else if (selectedColor === "tertiary") {
+            setColor(colorObjectify(tertiary))
+        } else if (selectedColor === "accent") {
+            setColor(colorObjectify(accent))
+        }
+    }, [selectedColor])
+
+
+    //converts colors back to objects
+    function colorObjectify(color) {
+        let seperation = color.split(" ");
+        let colorObj = {
+            r: parseInt(seperation[1], 10),
+            g: parseInt(seperation[3], 10),
+            b: parseInt(seperation[5], 10),
+            a: parseFloat(seperation[7], 10)
+        }
+        console.log(colorObj)
+        return colorObj
+    }
+
     //Utility functions
     //handles manual RGB changes
     function handleColorChange(e){
@@ -80,33 +108,31 @@ function ColorSelector({color, setColor}) {
             <RgbaColorPicker color={color} onChange={handleColorSet} />
             </div>
             <div className="color-detail-conatiner">
-                <div>
-                    <div className="red">
+                    <div className="red colorValue">
                         <label htmlFor="r">Red Value</label>
                         <br/>
                         <input id="r" value={color.r} onChange={handleColorChange}/>
                     </div>
-                    <div className="green">
+                    <div className="green colorValue">
                         <label htmlFor="g">Green Value</label>
                         <br/>
                         <input id="g" value={color.g} onChange={handleColorChange}/>
                     </div>
-                    <div className="blue">
+                    <div className="blue colorValue">
                         <label htmlFor="b">Blue Value</label>
                         <br/>
                         <input id="b" value={color.b} onChange={handleColorChange}/>
                     </div>
-                    <div className="transparency">
-                        <label htmlFor="a">Transparency Value</label>
+                    <div className="transparency colorValue">
+                        <label htmlFor="a">Transparency</label>
                         <br/>
                         <input id="a" value={color.a} onChange={handleColorChange}/>
                     </div>
-                    <div className="Hex">
+                    <div className="Hex colorValue">
                         <label htmlFor="hex">Hex Value</label>
                         <br/>
                         <input id="hex" value={hexColor} onChange={handleHexColorChange}/>
                     </div>
-                </div>
             </div>
         </div>
     )
