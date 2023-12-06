@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 
-function ColorPallet({color, setPrimary, setSecondary, setTertiary, setAccent, primary, secondary, tertiary, accent, setBackground, setTitleFont, setBodyFont, selectedColor, setSelectedColor}) {
+function ColorPallet({color, setPrimary, setSecondary, setTertiary, setAccent, primary, secondary, tertiary, accent, setBackground, setTitleFont, setBodyFont, selectedColor, setSelectedColor, background, titleFont, bodyFont}) {
     
     //converts color to string
     function colorStringify(color) {
@@ -66,7 +66,7 @@ function ColorPallet({color, setPrimary, setSecondary, setTertiary, setAccent, p
             <div className="secondaries-container">
                     <div className="secondary-value">
                         <label htmlFor="background" >Background Color:</label>
-                        <select id="background" onChange={handlesSecondarySelection}>
+                        <select id="background" onChange={handlesSecondarySelection} value={background}>
                             <option value="white">White</option>
                             <option value="black">Black</option>
                             <option value="primary">Primary</option>
@@ -77,7 +77,7 @@ function ColorPallet({color, setPrimary, setSecondary, setTertiary, setAccent, p
                     </div>
                     <div className="secondary-value">
                         <label htmlFor="title-font" >Title Font Color:</label>
-                        <select id="title-font" onChange={handlesSecondarySelection}>
+                        <select id="title-font" onChange={handlesSecondarySelection} value={titleFont}>
                             <option value="black">Black</option>
                             <option value="white">White</option>
                             <option value="primary">Primary</option>
@@ -88,7 +88,7 @@ function ColorPallet({color, setPrimary, setSecondary, setTertiary, setAccent, p
                     </div>
                     <div className="secondary-value">
                         <label htmlFor="body-font" >Body Font Color:</label>
-                        <select id="body-font" onChange={handlesSecondarySelection}>
+                        <select id="body-font" onChange={handlesSecondarySelection} value={bodyFont}>
                             <option value="black">Black</option>
                             <option value="white">White</option>
                             <option value="primary">Primary</option>
