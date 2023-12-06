@@ -99,17 +99,6 @@
   text-decoration: none;
 }
 
-.colorActive{
-  font-size: 20px;
-  font-family: Montserrat;
-  font-weight: 200px,
-}
-
-.color{
-  font-size: 15px;
-  font-family: Montserrat;
-  font-weight: 100px;
-}
     
 /* Color Studio CSS */
 
@@ -130,8 +119,8 @@
 header {
   width: 100%;
   display: flex;
-  border-bottom: solid;
-  border-width: 1px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
 .example nav {
@@ -145,8 +134,6 @@ header {
  font-weight: bold;
  padding: 5px;
  border-radius: 8px;
- border: solid;
- border-width: 1px;
 }
 
 header h2 {
@@ -161,8 +148,7 @@ header h2 {
   margin-right: auto;
   margin-bottom: 20px;
   margin-top: 20px;
-  border: solid;
-  border-width: 1px;
+  border-radius: 5px;
 }
 
 .jumbotron h3 {
@@ -171,6 +157,7 @@ header h2 {
   width: auto;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 5px;
 }
 
 .jumbotron p {
@@ -183,3 +170,107 @@ header h2 {
   border-radius: 8px;
 }
 
+/* Color Studio CSS Example Cards*/
+.card-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  text-align: center;
+  border-radius: 5px;
+  margin: 20px;
+  width: 20%;
+  padding: 10px;
+}
+
+.card button {
+  width: 20%;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  margin-right: 40%;
+  margin-left: 40%;
+}
+
+.card-content {
+  border-radius: 5px;
+}
+
+.card h3 {
+ margin: 0px;
+}
+
+.card p {
+  margin: 5px;
+ }
+
+ /* Color Selector CSS*/
+
+.RgbaPicker .react-colorful {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.color-detail-conatiner {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: Montserrat;
+  text-wrap: nowrap;
+  flex-wrap: wrap;
+}
+
+
+.colorValue {
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+
+.colorValue input{
+  text-align: center;
+  width: 80px;
+  font-size: 15px;
+
+}
+
+/* Color Pallet CSS*/
+
+.collor-pallet-title {
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+  margin-top: 30px;
+  font-family: Montserrat;
+}
+
+#pallet-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  font-family: Montserrat;
+}
+
+#pallet-container div{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#pallet-container div div{
+  width: 100px;
+  height: 100px;
+  border: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.colorActive div{
+  box-shadow: 2px 2px 2px 2px black;
+}
