@@ -25,6 +25,7 @@ function SavedColorPallets() {
                 <SavedPalletCard
                 key={pallet.id}
                 id={pallet.id}
+                name={pallet.name}
                 primary={pallet.primary}
                 secondary={pallet.secondary}
                 tertiary={pallet.tertiary}

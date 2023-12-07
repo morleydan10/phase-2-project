@@ -8,6 +8,7 @@
       "background": "white",
       "titleFont": "white",
       "bodyFont": "rgba( 0 , 0 , 0 , 1 )",
+      "name": "",
       "id": 2
     },
     {
@@ -42,6 +43,17 @@
       "bodyFont": "black",
       "name": "",
       "id": 6
+    },
+    {
+      "primary": "rgba( 186 , 96 , 96 , 1 )",
+      "secondary": "rgba( 188 , 24 , 24 , 1 )",
+      "tertiary": "rgba( 197 , 57 , 57 , 1 )",
+      "quarternary": "rgba( 99 , 199 , 198 , 1 )",
+      "background": "white)",
+      "titleFont": "black",
+      "bodyFont": "black",
+      "name": "Paleta ",
+      "id": 7
     }
   ]
 }
