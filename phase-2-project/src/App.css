@@ -290,6 +290,7 @@ header h2 {
 
 }
 
+
 /* Color Pallet CSS */
 
 .collor-pallet-title {
@@ -327,6 +328,35 @@ header h2 {
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 450px) {
+  #pallet-container div div{
+    width: 50px;
+    height: 50px;
+  }
+
+  .color {
+    width: 35%;
+    text-align: center;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .colorActive {
+    width: 35%;
+    text-align: center;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  #pallet-container h2{
+    font-size: 15px;
+  }
+
+  #pallet-container {
+    gap: 20px;
+  }
+}
+
 /* color secondaries css*/
 .secondaries-container {
   display: flex;
@@ -345,6 +375,12 @@ header h2 {
 
 .secondary-value select {
   border-radius: 5px;
+}
+
+@media (max-width: 450px) {
+  .secondary-value {
+    font-size: 12px;
+  }
 }
 
 /* css for blog example */
@@ -492,7 +528,6 @@ header h2 {
 }
 
 
-
 .load-button{
   width: 85px;
   height: 30px;
@@ -509,9 +544,6 @@ header h2 {
   -moz-box-shadow: rgba(0,0,0,0.3) 0 2px 4px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 2px 4px;
 }
-
-
-  
   
 .new-area {
   display: flex;

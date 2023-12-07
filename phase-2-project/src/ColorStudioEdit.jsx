@@ -38,10 +38,11 @@ function ColorStudioEdit() {
             setPrimary(data.primary)
             setSecondary(data.secondary)
             setTertiary(data.tertiary)
-            setAccent(data.acent)
+            setAccent(data.accent)
             setBackground(data.background)
             setTitleFont(data.titleFont)
             setBodyFont(data.bodyFont)
+            setPalleteName(data.name)
         })
     }, [])
 
@@ -51,7 +52,7 @@ function ColorStudioEdit() {
           primary: primary,
           secondary: secondary,
           tertiary: tertiary,
-          quarternary: accent,
+          accent: accent,
           background: background,
           titleFont: titleFont,
           bodyFont: bodyFont,

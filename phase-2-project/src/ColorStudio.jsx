@@ -22,7 +22,7 @@ function ColorStudio() {
     const[secondary, setSecondary] = useState("rgba( 255 , 255 , 255 , 1 )")
     const[tertiary, setTertiary] = useState("rgba( 255 , 255 , 255 , 1 )")
     const[accent, setAccent] = useState("rgba( 255 , 255 , 255 , 1 )")
-    const[background, setBackground] = useState("white)")
+    const[background, setBackground] = useState("white")
     const[titleFont, setTitleFont] = useState("black")
     const[bodyFont, setBodyFont] = useState("black")
     const[palleteName, setPalleteName] = useState("")
@@ -33,7 +33,7 @@ function ColorStudio() {
           primary: primary,
           secondary: secondary,
           tertiary: tertiary,
-          quarternary: accent,
+          accent: accent,
           background: background,
           titleFont: titleFont,
           bodyFont: bodyFont,

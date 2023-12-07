@@ -29,7 +29,7 @@ function SavedColorPallets() {
                 primary={pallet.primary}
                 secondary={pallet.secondary}
                 tertiary={pallet.tertiary}
-                quarternary={pallet.quarternary}
+                accent={pallet.accent}
                 background={pallet.background}
                 titleFont={pallet.titleFont}
                 bodyFont={pallet.bodyFont}
