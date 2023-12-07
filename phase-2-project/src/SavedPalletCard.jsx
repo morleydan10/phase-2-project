@@ -21,10 +21,11 @@ function SavedPalletCard({ id, primary, secondary, tertiary, accent, background,
 
     };
 
+
     return (
         <div className="saved-pallet-card">
             {/* try to get css to load in rows instead of columns */}
-            <h2 className="saved-pallet-heading">Saved Palette {id}</h2>
+            <h2 className="saved-pallet-heading">{(name === "") ? `Saved Palette ${id}` : name}</h2>
             <div className="card-color-div">
                 <div className="card-primary" style={{ backgroundColor: primary }}></div>
                 <div className="card-secondary" style={{ backgroundColor: secondary }}></div>
