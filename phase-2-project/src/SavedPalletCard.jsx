@@ -33,7 +33,7 @@ function SavedPalletCard({ id, primary, secondary, tertiary, quarternary, backgr
             </div>
             <div className="button-div">
                 {/* Need to change path to new load page */}
-                <NavLink  to="/ColorStudio/:id">
+                <NavLink  to={`/ColorStudio/${id}`}>
                     <button className="load-button">Load</button>
                 </NavLink>
                 <button onClick={handleClickDelete} className="delete-button">Delete</button>

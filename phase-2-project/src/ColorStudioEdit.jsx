@@ -5,7 +5,7 @@ import ColorPalletExamples from "./ColorPalletExamples";
 import { useParams } from "react-router-dom";
 
 
-function ColorStudio() {
+function ColorStudioEdit() {
     //sets up params
     const params = useParams();
 
@@ -145,4 +145,4 @@ function ColorStudio() {
     )
 }
 
-export default ColorStudio;
+export default ColorStudioEdit;
