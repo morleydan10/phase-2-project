@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-function SavedPalletCard({ id, primary, secondary, tertiary, quarternary, background, titleFont, bodyFont}) {
+function SavedPalletCard({ id, primary, secondary, tertiary, quarternary, background, titleFont, bodyFont, onDelete}) {
+
+
+    function handleClickDelete() {
+
+        fetch(`http://localhost:3000/pallets/${id}`, {
+            method: 'DELETE',
+            headers: {
+                "content-type": "application/json"
+            },
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            // console.log(data);
+            onDelete();
+        });
+
+
+    };
+
     return (
         <div className="saved-pallet-container">
-            {/* try and get css to load in rows instead of columns */}
+            {/* try to get css to load in rows instead of columns */}
             <h2 className="saved-pallet-heading">Saved Palette {id}</h2>
             <div className="card-color-div">
                 <div className="card-primary" style={{ backgroundColor: primary }}></div>
@@ -14,10 +33,10 @@ function SavedPalletCard({ id, primary, secondary, tertiary, quarternary, backgr
             </div>
             <div className="button-div">
                 {/* Need to change path to new load page */}
-                <NavLink  to="/ColorStudio">
+                <NavLink  to="/ColorStudio/:id">
                     <button className="load-button">Load</button>
                 </NavLink>
-                <button className="delete-button">Delete</button>
+                <button onClick={handleClickDelete} className="delete-button">Delete</button>
             </div>
         </div>
     )
