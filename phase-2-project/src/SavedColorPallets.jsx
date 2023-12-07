@@ -9,7 +9,7 @@ function SavedColorPallets() {
         fetch("http://localhost:3000/pallets")
         .then((res) => res.json())
         .then((data) => {
-            console.log(data);
+            // console.log(data);
             setSavedPallets(data);
         })
     }, []
@@ -46,7 +46,7 @@ function SavedColorPallets() {
             return (
                 <div>
                     <h1 className="page-heading">My Saved Palettes</h1>
-                    <div className="saved-pallet-container">
+                    <div className="saved-pallet-container" >
                     {renderSavePallets(savedPallets)}
                     </div>
                 </div>
