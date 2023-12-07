@@ -3,6 +3,7 @@ import ColorSelector from "./ColorSelector";
 import ColorPallet from "./ColorPallet";
 import ColorPalletExamples from "./ColorPalletExamples";
 import { useParams } from "react-router-dom";
+import Filter from "bad-words";
 
 
 function ColorStudioEdit() {
@@ -129,7 +130,7 @@ function ColorStudioEdit() {
                     <label htmlFor="pallet-name">Update Pallet Name:</label>
                     <input type="text" id="pallet-name" onChange={handleName} value={palleteName} maxLength="20"/>
                 </div>
-                <button className="new-pallet-button" onClick={handleSave}>Update Pallet</button>
+                <button className="new-pallet-button" onClick={handleEdit}>Update Pallet</button>
             </div>
             <ColorPalletExamples 
             background={background}
