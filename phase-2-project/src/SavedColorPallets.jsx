@@ -15,11 +15,14 @@ function SavedColorPallets() {
     }, []
     );
 
+
+
+    
     function renderSavePallets (pallets) {
         return pallets.map((pallet) => {
             return(
-        
-            <SavedPalletCard
+                
+                <SavedPalletCard
                 key={pallet.id}
                 id={pallet.id}
                 primary={pallet.primary}
@@ -29,13 +32,18 @@ function SavedColorPallets() {
                 background={pallet.background}
                 titleFont={pallet.titleFont}
                 bodyFont={pallet.bodyFont}
-            />
-        )})
-    }
-
-    
-    return (
-        <div>
+                onDelete={() => onDelete(pallet)}
+                />
+                )})
+            }
+            
+            function onDelete (deletedCard) {
+                    setSavedPallets(prevPallets => prevPallets.filter((pallet) => pallet.id !== deletedCard.id));
+                }
+        
+            
+            return (
+                <div>
             <h1 className="page-heading">My Saved Palettes</h1>
             {renderSavePallets(savedPallets)}
         </div>
