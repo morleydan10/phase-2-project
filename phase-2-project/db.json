@@ -19,7 +19,29 @@
       "titleFont": "black",
       "bodyFont": "black",
       "name": "",
-      "id": 3
+      "id": 4
+    },
+    {
+      "primary": "rgba( 255 , 255 , 255 , 1 )",
+      "secondary": "rgba( 255 , 255 , 255 , 1 )",
+      "tertiary": "rgba( 255 , 255 , 255 , 1 )",
+      "quarternary": "rgba( 255 , 255 , 255 , 1 )",
+      "background": "white)",
+      "titleFont": "black",
+      "bodyFont": "black",
+      "name": "",
+      "id": 5
+    },
+    {
+      "primary": "rgba( 255 , 255 , 255 , 1 )",
+      "secondary": "rgba( 255 , 255 , 255 , 1 )",
+      "tertiary": "rgba( 255 , 255 , 255 , 1 )",
+      "quarternary": "rgba( 255 , 255 , 255 , 1 )",
+      "background": "white)",
+      "titleFont": "black",
+      "bodyFont": "black",
+      "name": "",
+      "id": 6
     }
   ]
 }

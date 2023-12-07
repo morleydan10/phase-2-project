@@ -290,7 +290,7 @@ header h2 {
 
 }
 
-/* Color Pallet CSS*/
+/* Color Pallet CSS */
 
 .collor-pallet-title {
   text-align: center;
@@ -406,9 +406,31 @@ header h2 {
 }
 
 /* Saved Pallet Card */
-/* 
+
 .saved-pallet-container{
-} */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.saved-pallet-card{
+  width: 300px;
+  height: 310px;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-top: 40px;
+  transition: all 500ms;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 3px 5px;
+  -moz-box-shadow: rgba(0,0,0,0.3) 0 3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 3px 5px;
+}
+
+.saved-pallet-card:hover{
+  transform: scale(1.05);
+  transition: all 500ms;
+}
 
 .saved-pallet-heading{
   font-size: 20px;
@@ -419,14 +441,6 @@ header h2 {
   width: 300px;
   height:200px;
   border-width: 1px;
-  transition: all 500ms;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 3px 5px;
-  -moz-box-shadow: rgba(0,0,0,0.3) 0 3px 5px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 3px 5px;
-}
-
-.card-color-div:hover{
-  transform: scale(1.05);
   transition: all 500ms;
 }
 
@@ -453,15 +467,14 @@ header h2 {
 }
 
 .button-div{
-  align-items: center;
-  justify-content: space-evenly;
-  
-  width: 400px;
-  height: 100px;
-
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 300px;
+  height: 50px;
 }
 .delete-button{
-  width: 100px;
+  width: 85px;
   height: 30px;
   font-size: 15px;
   font-family: Montserrat;
@@ -470,19 +483,18 @@ header h2 {
   border-radius: 15px;
   border-color: black;
   border-width: 1px;
-  margin-top: 15px;
+  margin-top: auto;
+  margin-right: 18px;
+  margin-bottom: 7px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 3px 5px;
   -moz-box-shadow: rgba(0,0,0,0.3) 0 3px 5px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 3px 5px;
 }
 
-.delete-button:hover{
-  transform: scale(1.1);
-  transition: all 500ms;
-}
+
 
 .load-button{
-  width: 100px;
+  width: 85px;
   height: 30px;
   font-size: 15px;
   font-family: Montserrat;
@@ -490,17 +502,15 @@ header h2 {
   color:black;
   border-radius: 15px;
   border-width: 1px;
-  margin-right: 30px;
-  margin-top: 15px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 3px 5px;
-  -moz-box-shadow: rgba(0,0,0,0.3) 0 3px 5px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 3px 5px;
+  margin-top: auto;
+  margin-left: 18px;
+  margin-bottom: 7px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 2px 4px;
+  -moz-box-shadow: rgba(0,0,0,0.3) 0 2px 4px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 4px;
 }
 
-.load-button:hover{
-  transform: scale(1.1);
-  transition: all 500ms;
-}
+
   
   
 .new-area {

@@ -44,9 +44,11 @@ function SavedColorPallets() {
             
             return (
                 <div>
-            <h1 className="page-heading">My Saved Palettes</h1>
-            {renderSavePallets(savedPallets)}
-        </div>
+                    <h1 className="page-heading">My Saved Palettes</h1>
+                    <div className="saved-pallet-container">
+                    {renderSavePallets(savedPallets)}
+                    </div>
+                </div>
     )
 }
 

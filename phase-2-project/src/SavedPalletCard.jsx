@@ -22,7 +22,7 @@ function SavedPalletCard({ id, primary, secondary, tertiary, quarternary, backgr
     };
 
     return (
-        <div className="saved-pallet-container">
+        <div className="saved-pallet-card">
             {/* try to get css to load in rows instead of columns */}
             <h2 className="saved-pallet-heading">Saved Palette {id}</h2>
             <div className="card-color-div">
