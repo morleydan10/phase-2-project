@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-function SavedPalletCard({ id, primary, secondary, tertiary, quarternary, background, titleFont, bodyFont, onDelete}) {
+function SavedPalletCard({ id, primary, secondary, tertiary, accent, background, titleFont, bodyFont, onDelete}) {
 
 
     function handleClickDelete() {
@@ -29,7 +29,7 @@ function SavedPalletCard({ id, primary, secondary, tertiary, quarternary, backgr
                 <div className="card-primary" style={{ backgroundColor: primary }}></div>
                 <div className="card-secondary" style={{ backgroundColor: secondary }}></div>
                 <div className="card-tertiary" style={{ backgroundColor: tertiary }}></div>
-                <div className="card-quarternary" style={{ backgroundColor: quarternary }}></div>
+                <div className="card-quarternary" style={{ backgroundColor: accent }}></div>
             </div>
             <div className="button-div">
                 {/* Need to change path to new load page */}
