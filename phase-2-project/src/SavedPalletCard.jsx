@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-function SavedPalletCard({ id, primary, secondary, tertiary, accent, background, titleFont, bodyFont, onDelete}) {
+function SavedPalletCard({ id, name, primary, secondary, tertiary, accent, background, titleFont, bodyFont, onDelete}) {
 
 
     function handleClickDelete() {
