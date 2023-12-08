@@ -39,7 +39,7 @@ npm run dev
 
 ### Usage
 
-1. Open the React CSS Selector App in your preferred web browser.
+1. Open the CSS Color Palette App in your preferred web browser.
 
 2. Use the intuitive user interface to select and customize colors.
 
