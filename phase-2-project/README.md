@@ -1,4 +1,4 @@
-# React CSS Selector App
+# React CSS Color Palette App
 
 Welcome to the CSS Color Palette App! This application empowers developers to effortlessly create and customize their own color schemes, providing a live preview of how these colors might look on their webpages. With the ability to save and manage schemes, developers can easily experiment with different color combinations and reuse their favorite creations.
 
@@ -38,7 +38,7 @@ npm run dev
 
 ### Usage
 
-1. Open the React CSS Selector App in your preferred web browser.
+1. Open the React CSS Color Palette App in your preferred web browser.
 
 2. Use the intuitive user interface to select and customize colors.
 
