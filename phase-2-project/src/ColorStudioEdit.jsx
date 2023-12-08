@@ -32,7 +32,7 @@ function ColorStudioEdit() {
 
      //use effect for initial upload
      useEffect(() => {
-        fetch(`http://localhost:3000/pallets/${params.id}`)
+        fetch(`https://color-pallets.onrender.com/pallets/${params.id}`)
         .then(resp => resp.json())
         .then(data => {
             setPrimary(data.primary)

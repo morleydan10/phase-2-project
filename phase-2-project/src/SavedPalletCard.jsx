@@ -6,7 +6,7 @@ function SavedPalletCard({ id, name, primary, secondary, tertiary, accent, backg
 
     function handleClickDelete() {
 
-        fetch(`http://localhost:3000/pallets/${id}`, {
+        fetch(`https://color-pallets.onrender.com/pallets/${id}`, {
             method: 'DELETE',
             headers: {
                 "content-type": "application/json"

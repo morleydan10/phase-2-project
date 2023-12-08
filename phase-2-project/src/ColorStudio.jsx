@@ -41,7 +41,7 @@ function ColorStudio() {
         }
 
 
-        fetch("http://localhost:3000/pallets", {
+        fetch("https://color-pallets.onrender.com/pallets", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

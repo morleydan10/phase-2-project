@@ -6,7 +6,7 @@ function SavedColorPallets() {
     const [savedPallets, setSavedPallets] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/pallets")
+        fetch("https://color-pallets.onrender.com/pallets")
         .then((res) => res.json())
         .then((data) => {
             // console.log(data);
