@@ -60,7 +60,7 @@ function ColorStudioEdit() {
         }
 
 
-        fetch(`http://localhost:3000/pallets/${params.id}`, {
+        fetch(`https://color-pallets-website.onrender.com/pallets/${params.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
