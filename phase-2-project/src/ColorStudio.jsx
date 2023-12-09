@@ -18,7 +18,7 @@ function ColorStudio() {
     }
 
     //Color Pallet Colors
-    const[primary, setPrimary] = useState("rgba( 255 , 255 , 255 , 1 )")
+    const[primary, setPrimary] = useState("rgba( 105 , 50 , 50 , 1 )")
     const[secondary, setSecondary] = useState("rgba( 255 , 255 , 255 , 1 )")
     const[tertiary, setTertiary] = useState("rgba( 255 , 255 , 255 , 1 )")
     const[accent, setAccent] = useState("rgba( 255 , 255 , 255 , 1 )")

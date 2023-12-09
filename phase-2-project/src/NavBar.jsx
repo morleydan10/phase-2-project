@@ -7,7 +7,7 @@ const cssClass = ({ isActive, isPending }) =>
 function NavBar() {
     return (
         <div className="navbar">
-            <nav> 
+            <nav id="nav"> 
                 <NavLink className={cssClass} to="/">Home</NavLink>
                 <NavLink className={cssClass} to="/ColorStudio">Color Studio</NavLink>
                 <NavLink className={cssClass} to="/Pallets">My Saved Palettes</NavLink>

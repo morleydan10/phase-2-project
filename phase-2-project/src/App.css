@@ -61,7 +61,7 @@
   text-align: center;
   }
 
-  nav {
+  #nav {
     align-content: space-around;
     text-align: end;
     justify-content: flex-end;
@@ -128,7 +128,7 @@
   align-items: center;
 }
 
-nav {
+#nav {
   display: flex;
   flex-wrap: wrap;
 }
