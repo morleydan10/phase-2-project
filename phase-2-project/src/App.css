@@ -53,6 +53,21 @@
   box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
   transition: all 500ms;
 }
+
+@media (max-width: 450px) {
+  .homepage-div{
+  margin: 0px;
+  width: 90%;
+  text-align: center;
+  }
+
+  nav {
+    align-content: space-around;
+    text-align: end;
+    justify-content: flex-end;
+  }
+}
+
 .homepage-div:hover{
   transform: scale(1.05);
   transition: all 500ms;
@@ -109,8 +124,15 @@
 
 .navbar{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .navbar nav {
   display: flex;
   margin-left: auto;
