@@ -4,6 +4,7 @@ import ColorPallet from "./ColorPallet";
 import ColorPalletExamples from "./ColorPalletExamples";
 import { useParams } from "react-router-dom";
 import Filter from "bad-words";
+import Header from "./Header";
 
 
 function ColorStudioEdit() {
@@ -98,6 +99,7 @@ function ColorStudioEdit() {
 
     return (
         <div className="color-studio-page">
+            <Header />
             <ColorSelector 
             color={color} 
             setColor={setColorContainer}
