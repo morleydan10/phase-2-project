@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SavedPalletCard from "./SavedPalletCard";
+import Header from "./Header";
 
 function SavedColorPallets() {
 
@@ -45,6 +46,7 @@ function SavedColorPallets() {
             
             return (
                 <div>
+                    <Header />
                     <h1 className="page-heading">My Saved Palettes</h1>
                     <div className="saved-pallet-container" >
                     {renderSavePallets(savedPallets)}

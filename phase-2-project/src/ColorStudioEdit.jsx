@@ -97,7 +97,7 @@ function ColorStudioEdit() {
     }
 
     return (
-        <>
+        <div className="color-studio-page">
             <ColorSelector 
             color={color} 
             setColor={setColorContainer}
@@ -143,7 +143,7 @@ function ColorStudioEdit() {
             tertiary={tertiary}
             accent={accent} 
             />
-        </>
+        </div>
     )
 }
 

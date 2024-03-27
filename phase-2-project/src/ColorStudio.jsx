@@ -3,6 +3,7 @@ import ColorSelector from "./ColorSelector";
 import ColorPallet from "./ColorPallet";
 import ColorPalletExamples from "./ColorPalletExamples";
 import Filter from "bad-words";
+import Header from "./Header";
 
 
 
@@ -78,7 +79,8 @@ function ColorStudio() {
     
 
     return (
-        <>
+        <div className="color-studio-page">
+            <Header />
             <ColorSelector 
             color={color} 
             setColor={setColorContainer}
@@ -124,7 +126,7 @@ function ColorStudio() {
             tertiary={tertiary}
             accent={accent} 
             />
-        </>
+        </div>
     )
 }
 

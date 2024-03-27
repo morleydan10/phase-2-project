@@ -37,6 +37,8 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-content: center;
 }
 
@@ -45,6 +47,7 @@
   height: 50vh;
   margin:auto;
   background-color: whitesmoke;
+  /* background-image: linear-gradient(to bottom rgba(127, 238, 248, .8 ), white); */
   border-radius: 15px;
   padding: 30px;
   text-align: center;
@@ -105,7 +108,7 @@
   box-shadow: rgba(0, 0, 0, 0.3) 0 3px 5px;
   /* box-shadow: 3px 3px rgb(146, 146, 146); */
   border-radius: 40px;
-  background-color: whitesmoke;
+  background-color: white;
   transition: all 500ms;
 }
 
@@ -117,6 +120,7 @@
 /* Header CSS */
 
 .web-title{
+  padding: 20px;
   font-size: 60px;
   font-family: Montserrat;
   font-weight: 200px;
@@ -126,6 +130,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding: 20px;
 }
 
 #nav {
