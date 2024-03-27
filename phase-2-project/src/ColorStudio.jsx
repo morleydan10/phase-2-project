@@ -51,6 +51,7 @@ function ColorStudio() {
         })
         .then(resp => resp.json())
         .then(data => console.log(data))
+        alert("Palette successfully saved.")
     }
     //Pallete naming
     //Profanity Filter
@@ -111,10 +112,10 @@ function ColorStudio() {
             />
             <div className="new-area">
                 <div className="set-name">
-                    <label htmlFor="pallet-name">Pallet Name:</label>
+                    <label htmlFor="pallet-name">Palette Name:</label>
                     <input type="text" id="pallet-name" onChange={handleName} value={palleteName} maxLength="20"/>
                 </div>
-                <button className="new-pallet-button" onClick={handleSave}>Save Pallet</button>
+                <button className="new-pallet-button" onClick={handleSave}>Save Palette</button>
             </div>
             <ColorPalletExamples 
             background={background}
